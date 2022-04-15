@@ -1,0 +1,20 @@
+
+service Greeter {
+  // Sends a greeting
+  rpc add (CalculatorRequest) returns (CalculatorReply) {}
+  // Sends another greeting
+  rpc multiply (CalculatorRequest) returns (CalculatorReply) {}
+  rpc divide (CalculatorRequest) returns (CalculatorReply) {}
+  rpc subtract (CalculatorRequest) returns (CalculatorReply) {}
+}
+
+// The request message containing the user's name.
+message CalculatorRequest {
+  required double a = 1;
+  required double b = 2;
+}
+
+// The response message containing the greetings
+message CalculatorReply {
+  required double resp = 3;
+}
